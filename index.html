@@ -1,94 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 | Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Brasil</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; background:#f4f4f4;}
+    header {background:#2e7d32; color:white; padding:20px; text-align:center;}
+    nav {background:#1b5e20; padding:10px; text-align:center;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}/* MENU MOBILE */
+.menu-btn {display:none; background:#1b5e20; color:white; border:none; padding:10px; width:100%;}
+.nav-links {display:flex; justify-content:center; flex-wrap:wrap;}
+
+section {padding:20px;}
+.card {background:white; padding:15px; margin:10px 0; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);} 
+footer {background:#2e7d32; color:white; text-align:center; padding:15px;}
+.grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:15px;}
+
+input, textarea, button {width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;}
+button {background:#2e7d32; color:white; border:none; cursor:pointer;}
+
+#msg {margin-top:10px; font-weight:bold;}
+
+@media(max-width:768px){
+  .menu-btn {display:block;}
+  .nav-links {display:none; flex-direction:column;}
+  .nav-links a {margin:10px 0;}
+}
+
+  </style>
 </head>
-<body>
+<body><header>
+  <h1>Agro Brasil</h1>
+  <p>Tudo sobre o Agronegócio Brasileiro</p>
+</header><nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+  <div class="nav-links" id="menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#culturas">Culturas</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav><section id="sobre">
+  <h2>Sobre o Agro</h2>
+  <div class="card">
+    <p>O agronegócio é um dos setores mais importantes da economia brasileira.</p>
+  </div>
+</section><section id="culturas">
+  <h2>Principais Culturas</h2>
+  <div class="grid">
+    <div class="card"><h3>Soja</h3><p>Grande exportação.</p></div>
+    <div class="card"><h3>Milho</h3><p>Base da alimentação animal.</p></div>
+    <div class="card"><h3>Café</h3><p>Líder mundial.</p></div>
+    <div class="card"><h3>Cana</h3><p>Açúcar e etanol.</p></div>
+  </div>
+</section><section id="tecnologia">
+  <h2>Tecnologia no Campo</h2>
+  <div class="card">
+    <p>Drones e inteligência artificial aumentam a produtividade.</p>
+  </div>
+</section><section id="contato">
+  <h2>Contato</h2>
+  <div class="card">
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu email" required>
+      <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+      <p id="msg"></p>
+    </form>
+  </div>
+</section><footer>
+  <p>© 2026 Agro Brasil</p>
+</footer><script>
+  // MENU RESPONSIVO
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  }
 
-    <header>
-        <nav>
-            <div class="logo">🌾 Agrinho <span>2026</span></div>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">O Projeto</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  // FORMULÁRIO FUNCIONANDO
+  function enviarFormulario(event) {
+    event.preventDefault();
 
-    <main id="inicio">
-        <section class="hero">
-            <h1>Agro forte, futuro sustentável</h1>
-            <p>Conectando o campo e a cidade através da tecnologia e inovação.</p>
-            <a href="#sobre" class="btn-principal">Saiba Mais</a>
-        </section>
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const msg = document.getElementById('msg');
 
-        <section id="sobre" class="container">
-            <h2>Sobre o Projeto</h2>
-            <div class="cards">
-                <article>
-                    <h3>🌱 Preservação</h3>
-                    <p>Como técnicas modernas de plantio protegem nossas nascentes e solos.</p>
-                </article>
-                <article>
-                    <h3>🚜 Inovação</h3>
-                    <p>O uso de drones e IA para reduzir o desperdício no campo.</p>
-                </article>
-                <article>
-                    <h3>🍎 Alimentação</h3>
-                    <p>A importância de saber a origem do que chega à mesa na cidade.</p>
-                </article>
-            </div>
-        </section>
-    </main>
+    if (nome && email && mensagem) {
+      msg.style.color = 'green';
+      msg.innerText = 'Mensagem enviada com sucesso!';
 
-    <footer>
-        <p>&copy; 2026 Projeto Agrinho - Desenvolvido com foco no amanhã.</p>
-    </footer>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 | Futuro Sustentável</title>
-</head>
-<body style="font-family: sans-serif; background-color: #f4f9f4; margin: 0;">
-
-    <header style="background-color: #2d5a27; color: white; padding: 20px; text-align: center;">
-        <div class="logo" style="font-weight: bold; font-size: 24px;">🌾 Agrinho 2026</div>
-    </header>
-
-    <main style="text-align: center; padding: 50px;">
-        
-        <h1 style="color: red; font-size: 3rem;">Agro forte, futuro sustentável</h1>
-        
-        <p style="font-size: 1.2rem; color: #555;">Conectando o campo e a cidade através da tecnologia.</p>
-        
-        <br>
-        <a href="#" style="background-color: red; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-            Ver Projeto
-        </a>
-    </main>
-
-    <section style="display: flex; justify-content: center; gap: 20px; padding: 20px; flex-wrap: wrap;">
-        <div style="background: white; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <h3 style="color: #2d5a27;">🌱 Preservação</h3>
-            <p>Técnicas que protegem o nosso solo.</p>
-        </div>
-        <div style="background: white; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <h3 style="color: #2d5a27;">🚜 Inovação</h3>
-            <p>Tecnologia a serviço do produtor.</p>
-        </div>
-    </section>
-
-</body>
+      // limpa formulário
+      document.querySelector('form').reset();
+    } else {
+      msg.style.color = 'red';
+      msg.innerText = 'Preencha todos os campos!';
+    }
+  }
+</script></body>
 </html>
