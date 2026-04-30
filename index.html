@@ -1,110 +1,140 @@
-<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Brasil Completo</title>
+  <title>AgroBrasil - O Futuro do Campo</title>
   <style>
-    body {font-family: Arial; margin:0; background:#f4f4f4;}
-    header {background:#2e7d32; color:white; padding:20px; text-align:center;}
-    nav {background:#1b5e20; padding:10px; text-align:center;}
-    nav a {color:white; margin:10px; text-decoration:none; font-weight:bold; display:inline-block;}.menu-btn {display:none; background:#1b5e20; color:white; border:none; padding:10px; width:100%;}
-.nav-links {display:flex; justify-content:center; flex-wrap:wrap;}
-
-section {padding:30px;}
-.card {background:white; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);} 
-footer {background:#2e7d32; color:white; text-align:center; padding:15px;}
-
-.grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:15px;}
-
-a.botao {display:inline-block; margin-top:10px; padding:10px; background:#2e7d32; color:white; text-decoration:none; border-radius:5px;}
-
-input, textarea, button {width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;}
-button {background:#2e7d32; color:white; border:none; cursor:pointer;}
-
-@media(max-width:768px){
-  .menu-btn {display:block;}
-  .nav-links {display:none; flex-direction:column;}
-}
-
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1b5e20;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #4caf50;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #4caf50;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body><header>
-  <h1>Agro Brasil</h1>
-  <p>Conheça tudo sobre o agronegócio</p>
+  <h1>AgroBrasil</h1>
+  <p>Conectando tecnologia, sustentabilidade e produção rural</p>
 </header><nav>
-  <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
-  <div class="nav-links" id="menu">
-    <a href="#sobre">Sobre</a>
-    <a href="#culturas">Culturas</a>
-    <a href="#tecnologia">Tecnologia</a>
-    <a href="#mercado">Mercado</a>
-    <a href="#contato">Contato</a>
-  </div>
+  <a href="#sobre">Sobre</a>
+  <a href="#importancia">Importância</a>
+  <a href="#tecnologia">Tecnologia</a>
+  <a href="#sustentabilidade">Sustentabilidade</a>
+  <a href="#contato">Contato</a>
 </nav><section id="sobre">
   <h2>Sobre o Agro</h2>
-  <div class="card">
-    <p>O agronegócio engloba todas as atividades relacionadas à produção de alimentos e matérias-primas. No Brasil, ele é essencial para a economia, sendo responsável por exportações, empregos e abastecimento alimentar.</p>
-    <a class="botao" href="#culturas">Ver Culturas</a>
-  </div>
-</section><section id="culturas">
-  <h2>Culturas Agrícolas</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Soja</h3>
-      <p>Principal produto de exportação do Brasil.</p>
-      <a class="botao" href="#detalhe-soja">Saiba mais</a>
-    </div>
-    <div class="card">
-      <h3>Milho</h3>
-      <p>Base da alimentação animal.</p>
-      <a class="botao" href="#detalhe-milho">Saiba mais</a>
-    </div>
-  </div>
-</section><section id="detalhe-soja">
-  <h2>Detalhes da Soja</h2>
-  <div class="card">
-    <p>A soja é uma das culturas mais importantes do Brasil, utilizada na produção de óleo, ração e exportação.</p>
-    <a class="botao" href="#culturas">Voltar</a>
-  </div>
-</section><section id="detalhe-milho">
-  <h2>Detalhes do Milho</h2>
-  <div class="card">
-    <p>O milho é essencial na cadeia alimentar e na produção de ração animal.</p>
-    <a class="botao" href="#culturas">Voltar</a>
-  </div>
+  <p>
+    O agronegócio é um dos pilares mais importantes da economia brasileira e mundial. Ele engloba todas as atividades relacionadas à produção de alimentos, fibras e energia, desde o plantio até a distribuição.
+  </p>
+  <p>
+    Muito além da imagem tradicional do campo, o agro atual é altamente tecnológico, envolvendo máquinas modernas, sistemas de monitoramento e gestão inteligente. O produtor rural hoje atua como um verdadeiro gestor, tomando decisões baseadas em dados e inovação.
+  </p>
+  <p>
+    No Brasil, o agro tem um papel essencial na geração de empregos, exportações e abastecimento interno, sendo responsável por grande parte do PIB nacional.
+  </p>
+</section><section id="importancia">
+  <h2>Importância do Agro</h2>
+  <p>
+    O agronegócio é fundamental para garantir a segurança alimentar da população. Sem ele, não haveria produção suficiente de alimentos para atender à demanda crescente do mundo.
+  </p>
+  <p>
+    Além disso, o setor contribui diretamente para o desenvolvimento econômico, movimentando diversos segmentos como transporte, indústria, comércio e tecnologia.
+  </p>
+  <p>
+    O Brasil é um dos maiores produtores e exportadores de commodities agrícolas, como soja, milho, carne bovina e café, consolidando sua posição como potência mundial no agro.
+  </p>
 </section><section id="tecnologia">
-  <h2>Tecnologia no Agro</h2>
-  <div class="card">
-    <p>Uso de drones, sensores e inteligência artificial para melhorar a produção.</p>
-    <a class="botao" href="https://pt.wikipedia.org/wiki/Agricultura_de_precis%C3%A3o" target="_blank">Aprender mais</a>
-  </div>
-</section><section id="mercado">
-  <h2>Mercado Agro</h2>
-  <div class="card">
-    <p>O Brasil é um dos maiores exportadores do mundo. O mercado agro influencia diretamente a economia global.</p>
-  </div>
+  <h2>Tecnologia no Campo</h2>
+  <p>
+    A tecnologia tem transformado o agronegócio. Hoje, é possível monitorar plantações via satélite, utilizar drones para análise de lavouras e aplicar insumos de forma precisa.
+  </p>
+  <p>
+    Sistemas de agricultura de precisão permitem reduzir desperdícios e aumentar a produtividade, utilizando sensores e inteligência artificial.
+  </p>
+  <button onclick="mostrarMais()">Saiba mais</button>
+  <p id="extra" style="display:none;">
+    Com o avanço da tecnologia, o campo se tornou mais eficiente e sustentável. Ferramentas digitais ajudam produtores a prever condições climáticas, identificar pragas e otimizar recursos naturais.
+  </p>
+</section><section id="sustentabilidade">
+  <h2>Sustentabilidade</h2>
+  <p>
+    A sustentabilidade no agro é essencial para garantir a produção a longo prazo sem prejudicar o meio ambiente.
+  </p>
+  <p>
+    Práticas como rotação de culturas, uso consciente da água e preservação de áreas naturais são fundamentais.
+  </p>
+  <p>
+    O desafio atual é produzir mais com menos impacto, equilibrando crescimento econômico e responsabilidade ambiental.
+  </p>
 </section><section id="contato">
   <h2>Contato</h2>
-  <div class="card">
-    <form onsubmit="enviarFormulario(event)">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <input type="email" id="email" placeholder="Seu email" required>
-      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-      <p id="msg"></p>
-    </form>
-  </div>
+  <form onsubmit="enviarFormulario(event)">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+    <textarea placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="mensagem"></p>
 </section><footer>
-  <p>© 2026 Agro Brasil</p>
+  <p>© 2026 AgroBrasil - Todos os direitos reservados</p>
 </footer><script>
-function toggleMenu(){
-  const menu = document.getElementById('menu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-}
+  function mostrarMais() {
+    document.getElementById("extra").style.display = "block";
+  }
 
-function enviarFormulario(e){
-  e.preventDefault();
-  document.getElementById('msg').innerText = 'Mensagem enviada com sucesso!';
-}
+  function enviarFormulario(event) {
+    event.preventDefault();
+    document.getElementById("mensagem").innerText = "Mensagem enviada com sucesso!";
+  }
 </script></body>
 </html>
