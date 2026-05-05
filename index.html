@@ -1,268 +1,305 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agropecuária - Pecuária Moderna</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f7f3;
-      color: #333;
-    }
+<title>Pecuária Moderna | Alta Performance no Campo</title>
 
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+<style>
+:root {
+  --verde: #2e7d32;
+  --verde-escuro: #1b5e20;
+  --laranja: #ff9800;
+  --cinza: #f5f5f5;
+}
 
-    .btn {
-      display: inline-block;
-      background: #ff9800;
-      color: white;
-      padding: 14px 25px;
-      margin-top: 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .btn:hover {
-      background: #e68900;
-      transform: scale(1.05);
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cinza);
+  color: #333;
+  line-height: 1.6;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+/* HERO */
+header {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    h2 {
-      color: #2e7d32;
-      margin-bottom: 15px;
-    }
+.hero {
+  color: white;
+  max-width: 800px;
+}
 
-    .products {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
 
-    .product {
-      flex: 1 1 45%;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
 
-    .product:hover {
-      transform: translateY(-5px);
-    }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 30px;
+  background: var(--laranja);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+.btn:hover {
+  transform: translateY(-3px);
+  background: #e68900;
+}
 
-    .section {
-      margin-top: 50px;
-    }
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .highlight {
-      background: #e8f5e9;
-      padding: 20px;
-      border-radius: 10px;
-    }
+/* TITLES */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--verde);
+}
 
-    .form {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+/* PRODUTOS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
 
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
 
-    button {
-      width: 100%;
-      padding: 15px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    button:hover {
-      background: #256428;
-    }
+.card h3 {
+  margin-bottom: 10px;
+}
 
-    footer {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
+.card ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
 
-    /* Botão flutuante WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 22px;
-      text-decoration: none;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    }
+/* HIGHLIGHT */
+.highlight {
+  background: #e8f5e9;
+  padding: 30px;
+  border-radius: 12px;
+}
 
-    @media(max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      .products {
-        flex-direction: column;
-      }
-    }
-  </style>
+/* FORM */
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: var(--verde);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--verde-escuro);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--verde);
+  color: white;
+}
+
+/* WHATS FLOAT */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .hero h1 { font-size: 2rem; }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Aumente o desempenho do seu rebanho</h1>
-  <p>Nutrição e tecnologia para pecuária moderna no Sul do Brasil</p>
-  <a class="btn" href="https://wa.me/5599999999999" target="_blank">Solicitar orçamento</a>
+  <div class="hero">
+    <h1>Alta performance para seu rebanho</h1>
+    <p>Nutrição e tecnologia moderna para pecuária no Sul do Brasil</p>
+    <a href="https://wa.me/5599999999999" class="btn">Solicitar Orçamento</a>
+  </div>
 </header>
 
 <div class="container">
 
-  <div class="section">
-    <p>
-      Na pecuária moderna, resultados dependem de nutrição eficiente e decisões inteligentes.
-      Trabalhamos com soluções que aumentam produtividade, reduzem custos e geram mais lucro.
-    </p>
-  </div>
+  <p>
+    Trabalhamos com soluções modernas para pecuária, focadas em aumentar produtividade,
+    reduzir custos e gerar mais lucro no campo.
+  </p>
 
-  <div class="section">
-    <h2>Produtos</h2>
+  <br><br>
 
-    <div class="products">
+  <h2>Produtos</h2>
 
-      <div class="product">
-        <h3>Suplemento Mineral</h3>
-        <ul>
-          <li>Melhor ganho de peso</li>
-          <li>Fortalece a saúde</li>
-          <li>Mais eficiência no pasto</li>
-        </ul>
-        <a class="btn" href="https://wa.me/5599999999999">Quero saber mais</a>
-      </div>
+  <div class="products">
 
-      <div class="product">
-        <h3>Ração de Alta Performance</h3>
-        <ul>
-          <li>Crescimento acelerado</li>
-          <li>Melhor conversão alimentar</li>
-          <li>Maior rendimento</li>
-        </ul>
-        <a class="btn" href="https://wa.me/5599999999999">Solicitar orçamento</a>
-      </div>
-
+    <div class="card">
+      <h3>Suplemento Mineral</h3>
+      <ul>
+        <li>Mais ganho de peso</li>
+        <li>Saúde do rebanho</li>
+        <li>Melhor aproveitamento do pasto</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5599999999999">Saiba mais</a>
     </div>
+
+    <div class="card">
+      <h3>Ração Alta Performance</h3>
+      <ul>
+        <li>Crescimento acelerado</li>
+        <li>Melhor conversão alimentar</li>
+        <li>Maior rendimento</li>
+      </ul>
+      <a class="btn" href="https://wa.me/5599999999999">Orçamento</a>
+    </div>
+
   </div>
 
-  <div class="section highlight">
+  <br><br>
+
+  <div class="highlight">
     <h2>Diferenciais</h2>
     <ul>
       <li>Tecnologia moderna</li>
       <li>Atendimento especializado</li>
-      <li>Foco em resultados reais</li>
+      <li>Resultados comprovados</li>
     </ul>
   </div>
 
-  <div class="section">
-    <h2>Resultados</h2>
-    <ul>
-      <li>+30% no desempenho</li>
-      <li>Redução de custos</li>
-      <li>Mais lucro por ciclo</li>
-    </ul>
-  </div>
+  <br><br>
 
-  <div class="section">
-    <h2>Depoimento</h2>
-    <p>"O desempenho do rebanho melhorou muito com os produtos."</p>
-  </div>
+  <h2>Resultados</h2>
+  <ul>
+    <li>+30% desempenho</li>
+    <li>Redução de custos</li>
+    <li>Mais lucro</li>
+  </ul>
 
-  <div class="section">
-    <h2>Sobre</h2>
-    <p>Atendemos produtores do Sul com soluções modernas para pecuária de alta performance.</p>
-  </div>
+  <br><br>
 
-  <div class="section highlight">
+  <h2>Depoimento</h2>
+  <p>"O desempenho do rebanho melhorou rapidamente."</p>
+
+  <br><br>
+
+  <h2>Sobre</h2>
+  <p>Atendemos produtores do Sul com soluções modernas e foco em resultados reais.</p>
+
+  <br><br>
+
+  <div class="highlight">
     <h2>Oferta Especial</h2>
-    <p>Orçamento gratuito + atendimento personalizado.</p>
+    <p>Orçamento gratuito + atendimento personalizado</p>
   </div>
 
-  <div class="section form">
-    <h2>Receba uma proposta</h2>
+  <br><br>
 
-    <input type="text" id="nome" placeholder="Seu nome">
-    <input type="text" id="whats" placeholder="Seu WhatsApp">
-    <input type="text" id="cidade" placeholder="Cidade">
-    <input type="text" id="tipo" placeholder="Tipo de criação">
+  <div class="form-box">
+    <h2>Receba sua proposta</h2>
 
-    <button onclick="enviarWhats()">Receber orçamento</button>
+    <input id="nome" placeholder="Nome">
+    <input id="whats" placeholder="WhatsApp">
+    <input id="cidade" placeholder="Cidade">
+    <input id="tipo" placeholder="Tipo de criação">
+
+    <button onclick="enviar()">Receber Orçamento</button>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 Agropecuária</p>
+  <p>© 2026 Pecuária Moderna</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/5599999999999" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
 
 <script>
-function enviarWhats() {
-  let nome = document.getElementById('nome').value;
-  let whats = document.getElementById('whats').value;
-  let cidade = document.getElementById('cidade').value;
-  let tipo = document.getElementById('tipo').value;
+function enviar(){
+  let n = nome.value;
+  let w = whats.value;
+  let c = cidade.value;
+  let t = tipo.value;
 
-  let mensagem = `Olá, quero um orçamento:%0A
-Nome: ${nome}%0A
-WhatsApp: ${whats}%0A
-Cidade: ${cidade}%0A
-Tipo de criação: ${tipo}`;
+  let msg = `Olá, quero orçamento:%0A
+Nome: ${n}%0AWhats: ${w}%0ACidade: ${c}%0ATipo: ${t}`;
 
-  window.open(`https://wa.me/5599999999999?text=${mensagem}`, '_blank');
+  window.open(`https://wa.me/5599999999999?text=${msg}`);
 }
 </script>
 
