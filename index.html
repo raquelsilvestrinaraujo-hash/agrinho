@@ -1,140 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgroBrasil - O Futuro do Campo</title>
+  <title>Agropecuária - Soluções para Pecuária</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
     }
+
     header {
       background: #2e7d32;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 40px 20px;
     }
-    nav {
-      background: #1b5e20;
-      display: flex;
-      justify-content: center;
+
+    header h1 {
+      margin-bottom: 10px;
     }
-    nav a {
+
+    .btn {
+      display: inline-block;
+      background: #ff9800;
       color: white;
-      padding: 14px 20px;
+      padding: 12px 20px;
+      margin-top: 15px;
       text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
-    nav a:hover {
-      background: #4caf50;
-    }
-    section {
-      padding: 20px;
+
+    .container {
+      padding: 30px 20px;
       max-width: 1000px;
       margin: auto;
       background: white;
-      margin-top: 10px;
+    }
+
+    img {
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px 0;
     }
-    footer {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    button {
+
+    .product {
+      flex: 1 1 45%;
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .form input, .form button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form button {
       background: #2e7d32;
       color: white;
       border: none;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 5px;
+      font-weight: bold;
     }
-    button:hover {
-      background: #4caf50;
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2e7d32;
+      color: white;
+      margin-top: 40px;
     }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+
+    @media(max-width: 768px) {
+      .products {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
-<body><header>
-  <h1>AgroBrasil</h1>
-  <p>Conectando tecnologia, sustentabilidade e produção rural</p>
-</header><nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#importancia">Importância</a>
-  <a href="#tecnologia">Tecnologia</a>
-  <a href="#sustentabilidade">Sustentabilidade</a>
-  <a href="#contato">Contato</a>
-</nav><section id="sobre">
-  <h2>Sobre o Agro</h2>
-  <p>
-    O agronegócio é um dos pilares mais importantes da economia brasileira e mundial. Ele engloba todas as atividades relacionadas à produção de alimentos, fibras e energia, desde o plantio até a distribuição.
-  </p>
-  <p>
-    Muito além da imagem tradicional do campo, o agro atual é altamente tecnológico, envolvendo máquinas modernas, sistemas de monitoramento e gestão inteligente. O produtor rural hoje atua como um verdadeiro gestor, tomando decisões baseadas em dados e inovação.
-  </p>
-  <p>
-    No Brasil, o agro tem um papel essencial na geração de empregos, exportações e abastecimento interno, sendo responsável por grande parte do PIB nacional.
-  </p>
-</section><section id="importancia">
-  <h2>Importância do Agro</h2>
-  <p>
-    O agronegócio é fundamental para garantir a segurança alimentar da população. Sem ele, não haveria produção suficiente de alimentos para atender à demanda crescente do mundo.
-  </p>
-  <p>
-    Além disso, o setor contribui diretamente para o desenvolvimento econômico, movimentando diversos segmentos como transporte, indústria, comércio e tecnologia.
-  </p>
-  <p>
-    O Brasil é um dos maiores produtores e exportadores de commodities agrícolas, como soja, milho, carne bovina e café, consolidando sua posição como potência mundial no agro.
-  </p>
-</section><section id="tecnologia">
-  <h2>Tecnologia no Campo</h2>
-  <p>
-    A tecnologia tem transformado o agronegócio. Hoje, é possível monitorar plantações via satélite, utilizar drones para análise de lavouras e aplicar insumos de forma precisa.
-  </p>
-  <p>
-    Sistemas de agricultura de precisão permitem reduzir desperdícios e aumentar a produtividade, utilizando sensores e inteligência artificial.
-  </p>
-  <button onclick="mostrarMais()">Saiba mais</button>
-  <p id="extra" style="display:none;">
-    Com o avanço da tecnologia, o campo se tornou mais eficiente e sustentável. Ferramentas digitais ajudam produtores a prever condições climáticas, identificar pragas e otimizar recursos naturais.
-  </p>
-</section><section id="sustentabilidade">
-  <h2>Sustentabilidade</h2>
-  <p>
-    A sustentabilidade no agro é essencial para garantir a produção a longo prazo sem prejudicar o meio ambiente.
-  </p>
-  <p>
-    Práticas como rotação de culturas, uso consciente da água e preservação de áreas naturais são fundamentais.
-  </p>
-  <p>
-    O desafio atual é produzir mais com menos impacto, equilibrando crescimento econômico e responsabilidade ambiental.
-  </p>
-</section><section id="contato">
-  <h2>Contato</h2>
-  <form onsubmit="enviarFormulario(event)">
-    <input type="text" placeholder="Seu nome" required>
-    <input type="email" placeholder="Seu email" required>
-    <textarea placeholder="Sua mensagem" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <p id="mensagem"></p>
-</section><footer>
-  <p>© 2026 AgroBrasil - Todos os direitos reservados</p>
-</footer><script>
-  function mostrarMais() {
-    document.getElementById("extra").style.display = "block";
-  }
+<body>
 
-  function enviarFormulario(event) {
-    event.preventDefault();
-    document.getElementById("mensagem").innerText = "Mensagem enviada com sucesso!";
-  }
-</script></body>
+<header>
+  <h1>Aumente o desempenho do seu rebanho com tecnologia</h1>
+  <p>Soluções modernas para pecuária no Sul do Brasil</p>
+  <a href="#form" class="btn">Solicitar orçamento no WhatsApp</a>
+</header>
+
+<div class="container">
+
+  <!-- IMAGEM -->
+  <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30" alt="Gado no pasto">
+
+  <!-- TEXTO DE ABERTURA -->
+  <div class="section">
+    <p>
+      Na pecuária moderna, resultados dependem de nutrição eficiente e decisões inteligentes.
+      Oferecemos soluções que ajudam a melhorar o desempenho do rebanho, reduzir custos e aumentar a lucratividade.
+    </p>
+  </div>
+
+  <!-- PRODUTOS -->
+  <div class="section">
+    <h2>Produtos</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <h3>Suplemento Mineral para Gado</h3>
+        <p>Produto essencial para o desenvolvimento saudável do rebanho.</p>
+        <ul>
+          <li>Melhor ganho de peso</li>
+          <li>Fortalece a saúde</li>
+          <li>Melhor aproveitamento da pastagem</li>
+        </ul>
+        <a href="#form" class="btn">Quero mais informações</a>
+      </div>
+
+      <div class="product">
+        <h3>Ração de Alta Performance</h3>
+        <p>Nutrição balanceada com tecnologia moderna.</p>
+        <ul>
+          <li>Crescimento mais rápido</li>
+          <li>Melhor conversão alimentar</li>
+          <li>Mais rendimento por animal</li>
+        </ul>
+        <a href="#form" class="btn">Solicitar orçamento</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <div class="section">
+    <h2>Diferenciais</h2>
+    <ul>
+      <li>Tecnologia moderna</li>
+      <li>Produtos testados</li>
+      <li>Atendimento especializado</li>
+      <li>Foco em produtividade</li>
+    </ul>
+  </div>
+
+  <!-- RESULTADOS -->
+  <div class="section">
+    <h2>Resultados</h2>
+    <ul>
+      <li>+30% no desempenho do rebanho</li>
+      <li>Redução de custos</li>
+      <li>Mais lucro por ciclo</li>
+    </ul>
+  </div>
+
+  <!-- DEPOIMENTO -->
+  <div class="section">
+    <h2>Depoimento</h2>
+    <p>"O ganho de peso melhorou muito depois que comecei a usar."</p>
+  </div>
+
+  <!-- SOBRE -->
+  <div class="section">
+    <h2>Sobre</h2>
+    <p>
+      Atuamos com soluções modernas para pecuária no Sul do Brasil, ajudando produtores a aumentar produtividade e lucratividade.
+    </p>
+  </div>
+
+  <!-- OFERTA -->
+  <div class="section">
+    <h2>Oferta Especial</h2>
+    <p>Orçamento gratuito + atendimento personalizado.</p>
+  </div>
+
+  <!-- FORMULÁRIO -->
+  <div class="section form" id="form">
+    <h2>Receba uma proposta</h2>
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="WhatsApp">
+    <input type="text" placeholder="Cidade">
+    <input type="text" placeholder="Tipo de criação">
+    <button>Receber orçamento agora</button>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Agropecuária - Todos os direitos reservados</p>
+</footer>
+
+</body>
 </html>
