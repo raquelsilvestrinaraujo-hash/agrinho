@@ -4,184 +4,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pecuária Moderna | Alta Performance no Campo</title>
+<title>Pecuária de Alta Performance</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --verde: #2e7d32;
-  --verde-escuro: #1b5e20;
-  --laranja: #ff9800;
-  --cinza: #f5f5f5;
+:root{
+  --verde:#00c853;
+  --escuro:#0f172a;
+  --glass: rgba(255,255,255,0.08);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--cinza);
-  color: #333;
-  line-height: 1.6;
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
 }
 
 /* HERO */
-header {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
+header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
 }
 
-.hero {
-  color: white;
-  max-width: 800px;
+.hero{
+  max-width:800px;
+  animation:fade 1.5s ease;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+.hero h1{
+  font-size:3.2rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#00c853,#69f0ae);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+.hero p{
+  margin-top:15px;
+  opacity:0.8;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 15px 30px;
-  background: var(--laranja);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s;
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 35px;
+  border-radius:50px;
+  background:linear-gradient(90deg,#00c853,#69f0ae);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  background: #e68900;
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00c853;
 }
 
 /* CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+/* GLASS */
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border-radius:15px;
+  padding:30px;
+  margin-top:30px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:var(--glass);
+  padding:25px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 0 30px rgba(0,255,100,0.3);
 }
 
 /* TITLES */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--verde);
-}
-
-/* PRODUTOS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card ul {
-  padding-left: 20px;
-  margin: 15px 0;
-}
-
-/* HIGHLIGHT */
-.highlight {
-  background: #e8f5e9;
-  padding: 30px;
-  border-radius: 12px;
+h2{
+  margin-bottom:15px;
+  font-size:2rem;
+  color:#69f0ae;
 }
 
 /* FORM */
-.form-box {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  outline:none;
 }
 
-input {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(90deg,#00c853,#69f0ae);
+  font-weight:600;
+  cursor:pointer;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  background: var(--verde);
-  color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: 600;
+/* FLOAT WHATS */
+.whats{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  color:white;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
-button:hover {
-  background: var(--verde-escuro);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: var(--verde);
-  color: white;
-}
-
-/* WHATS FLOAT */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  .hero h1 { font-size: 2rem; }
+/* ANIMAÇÃO */
+@keyframes fade{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
 }
 </style>
 </head>
@@ -190,87 +158,71 @@ footer {
 
 <header>
   <div class="hero">
-    <h1>Alta performance para seu rebanho</h1>
-    <p>Nutrição e tecnologia moderna para pecuária no Sul do Brasil</p>
-    <a href="https://wa.me/5599999999999" class="btn">Solicitar Orçamento</a>
+    <h1>Pecuária no Próximo Nível</h1>
+    <p>Alta performance, tecnologia e lucro no campo</p>
+    <a href="https://wa.me/5599999999999" class="btn">Falar no WhatsApp</a>
   </div>
 </header>
 
 <div class="container">
 
-  <p>
-    Trabalhamos com soluções modernas para pecuária, focadas em aumentar produtividade,
-    reduzir custos e gerar mais lucro no campo.
-  </p>
-
-  <br><br>
-
-  <h2>Produtos</h2>
-
-  <div class="products">
-
-    <div class="card">
-      <h3>Suplemento Mineral</h3>
-      <ul>
-        <li>Mais ganho de peso</li>
-        <li>Saúde do rebanho</li>
-        <li>Melhor aproveitamento do pasto</li>
-      </ul>
-      <a class="btn" href="https://wa.me/5599999999999">Saiba mais</a>
-    </div>
-
-    <div class="card">
-      <h3>Ração Alta Performance</h3>
-      <ul>
-        <li>Crescimento acelerado</li>
-        <li>Melhor conversão alimentar</li>
-        <li>Maior rendimento</li>
-      </ul>
-      <a class="btn" href="https://wa.me/5599999999999">Orçamento</a>
-    </div>
-
+  <div class="glass">
+    <h2>Sobre</h2>
+    <p>
+      Soluções modernas para pecuária no Sul do Brasil. Aumente produtividade,
+      reduza custos e leve seu rebanho a outro nível.
+    </p>
   </div>
 
-  <br><br>
+  <div class="glass">
+    <h2>Produtos</h2>
 
-  <div class="highlight">
+    <div class="grid">
+
+      <div class="card">
+        <h3>Suplemento Mineral</h3>
+        <p>Mais ganho de peso e saúde animal.</p>
+        <a class="btn" href="https://wa.me/5599999999999">Saiba mais</a>
+      </div>
+
+      <div class="card">
+        <h3>Ração Premium</h3>
+        <p>Crescimento acelerado e máximo rendimento.</p>
+        <a class="btn" href="https://wa.me/5599999999999">Orçamento</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="glass">
     <h2>Diferenciais</h2>
     <ul>
-      <li>Tecnologia moderna</li>
-      <li>Atendimento especializado</li>
-      <li>Resultados comprovados</li>
+      <li>Tecnologia avançada</li>
+      <li>Alta performance</li>
+      <li>Resultados reais</li>
     </ul>
   </div>
 
-  <br><br>
-
-  <h2>Resultados</h2>
-  <ul>
-    <li>+30% desempenho</li>
-    <li>Redução de custos</li>
-    <li>Mais lucro</li>
-  </ul>
-
-  <br><br>
-
-  <h2>Depoimento</h2>
-  <p>"O desempenho do rebanho melhorou rapidamente."</p>
-
-  <br><br>
-
-  <h2>Sobre</h2>
-  <p>Atendemos produtores do Sul com soluções modernas e foco em resultados reais.</p>
-
-  <br><br>
-
-  <div class="highlight">
-    <h2>Oferta Especial</h2>
-    <p>Orçamento gratuito + atendimento personalizado</p>
+  <div class="glass">
+    <h2>Resultados</h2>
+    <ul>
+      <li>+30% produtividade</li>
+      <li>Menos custos</li>
+      <li>Mais lucro</li>
+    </ul>
   </div>
 
-  <br><br>
+  <div class="glass">
+    <h2>Depoimento</h2>
+    <p>"Resultado rápido e visível no rebanho."</p>
+  </div>
 
-  <div class="form-box">
+  <div class="glass">
+    <h2>Oferta</h2>
+    <p>Orçamento gratuito + atendimento exclusivo</p>
+  </div>
+
+  <div class="glass">
     <h2>Receba sua proposta</h2>
 
     <input id="nome" placeholder="Nome">
@@ -278,26 +230,20 @@ footer {
     <input id="cidade" placeholder="Cidade">
     <input id="tipo" placeholder="Tipo de criação">
 
-    <button onclick="enviar()">Receber Orçamento</button>
+    <button onclick="enviar()">Receber agora</button>
   </div>
 
 </div>
 
-<footer>
-  <p>© 2026 Pecuária Moderna</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
+<a class="whats" href="https://wa.me/5599999999999">💬</a>
 
 <script>
 function enviar(){
-  let n = nome.value;
-  let w = whats.value;
-  let c = cidade.value;
-  let t = tipo.value;
-
-  let msg = `Olá, quero orçamento:%0A
-Nome: ${n}%0AWhats: ${w}%0ACidade: ${c}%0ATipo: ${t}`;
+  let msg=`Olá, quero orçamento:%0A
+Nome: ${nome.value}%0A
+Whats: ${whats.value}%0A
+Cidade: ${cidade.value}%0A
+Tipo: ${tipo.value}`;
 
   window.open(`https://wa.me/5599999999999?text=${msg}`);
 }
